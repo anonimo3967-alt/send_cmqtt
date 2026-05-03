@@ -20,6 +20,10 @@ def on_message(client, userdata, message):
     message_received=str(message.payload.decode("utf-8"))
     st.write(message_received)
 
+
+with st.sidebar:
+    st.image("bajo-control.jpeg")
+
         
 
 
