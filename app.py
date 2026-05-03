@@ -34,11 +34,11 @@ st.title("MQTT para enviar cosas en vez de recibirlas")
 
 st.text("Unas aclaraciones... Para que funcione, el cliente NO puede ser el mismo que el de wokwi, pero el topico de subscripcion si")
 
-st.text("Ahora una pequeña explicación de como funciona... Resulta que si le das a Encender los motores y luego escoges un valor en el slider, y le das al boton de enviar, tu valor se enviara a un MQTT para girar un motor en wokwi")
+st.text("Ahora una pequeña explicación de como funciona... Resulta que si le das a Encender la luz, y tambien si puedes escoges un valor en el slider, y le das al boton de enviar, tu valor se enviara a un MQTT para girar un motor en wokwi y encender una luz o apagarla")
 
 
 
-if st.button('Encender los motores', type="primary"):
+if st.button('Encender la luz'):
     act1="ON"
     client1= paho.Client("cliente_amadeus_10229")                           
     client1.on_publish = on_publish                          
@@ -52,7 +52,7 @@ if st.button('Encender los motores', type="primary"):
 else:
     st.write('')
 
-if st.button('Apagar los motores'):
+if st.button('Apagar la luz'):
     act1="OFF"
     client1= paho.Client("cliente_amadeus_10229")                           
     client1.on_publish = on_publish                          
