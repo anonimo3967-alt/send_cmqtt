@@ -64,10 +64,10 @@ if st.button('Apagar los motores'):
 else:
     st.write('')
 
-values = st.slider('Selecciona el rango de valores',0.0, 100.0)
+values = st.slider('Aquí puedes seleccionar el valor a enviar',0.0, 100.0)
 st.write('Values:', values)
 
-if st.button('Enviar valor analógico'):
+if st.button('Enviar valor', type="primary"):
     client1= paho.Client("cliente_amadeus_10229")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)   
