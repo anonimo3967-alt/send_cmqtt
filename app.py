@@ -34,15 +34,7 @@ st.title("MQTT para enviar cosas en vez de recibirlas")
 
 st.text("Unas aclaraciones... Para que funcione, el cliente NO puede ser el mismo que el de wokwi, pero el topico de subscripcion si")
 
-st.text("Ahora bien, te voy a mostrar las cosas aqui en esta interfaz que es un poquito más amigable:")
 
-st.write("Cliente", client1)
-
-st.write("Broker", broker)
-
-st.write("Port", port)
-
-st.text("Ahora bien, el topico si que lo tienes que cambiar desde codigo...")
 
 if st.button('ON'):
     act1="ON"
